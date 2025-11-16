@@ -5,7 +5,7 @@
     "thumbnail": "https://i.ytimg.com/vi/TZ5a3gCCZYo/maxresdefault.jpg",
     "author": "Ryan Fleury",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860392Z"
+    "addedAt": "2025-11-16T20:02:05.860392Z"
   },
   "https://www.youtube.com/watch?v=7z5FwdfL7v4": {
     "url": "https://www.youtube.com/watch?v=7z5FwdfL7v4",
@@ -13,7 +13,7 @@
     "thumbnail": "https://i.ytimg.com/vi/7z5FwdfL7v4/maxresdefault.jpg",
     "author": "Grafana",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860414Z"
+    "addedAt": "2025-11-16T20:02:05.860414Z"
   },
   "https://www.youtube.com/watch?v=8bDgWvyglno": {
     "url": "https://www.youtube.com/watch?v=8bDgWvyglno",
@@ -21,7 +21,7 @@
     "thumbnail": "https://i.ytimg.com/vi/8bDgWvyglno/maxresdefault.jpg",
     "author": "Gerhard Lazu",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860417Z"
+    "addedAt": "2025-11-16T20:02:05.860417Z"
   },
   "https://www.youtube.com/watch?v=QL_yJWI-kNI": {
     "url": "https://www.youtube.com/watch?v=QL_yJWI-kNI",
@@ -29,7 +29,7 @@
     "thumbnail": "https://i.ytimg.com/vi/QL_yJWI-kNI/maxresdefault.jpg",
     "author": "Solana",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860419Z"
+    "addedAt": "2025-11-16T20:02:05.860419Z"
   },
   "https://www.youtube.com/watch?v=l8pRSuU81PU": {
     "url": "https://www.youtube.com/watch?v=l8pRSuU81PU",
@@ -37,7 +37,7 @@
     "thumbnail": "https://i.ytimg.com/vi/l8pRSuU81PU/maxresdefault.jpg",
     "author": "Andrej Karpathy",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860421Z"
+    "addedAt": "2025-11-16T20:02:05.860421Z"
   },
   "https://www.youtube.com/watch?v=4YU_r70yGjQ": {
     "url": "https://www.youtube.com/watch?v=4YU_r70yGjQ",
@@ -45,7 +45,7 @@
     "thumbnail": "https://i.ytimg.com/vi/4YU_r70yGjQ/maxresdefault.jpg",
     "author": "No Boilerplate",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860423Z"
+    "addedAt": "2025-11-16T20:02:05.860423Z"
   },
   "https://www.youtube.com/watch?v=bnnacleqg6k": {
     "url": "https://www.youtube.com/watch?v=bnnacleqg6k",
@@ -53,7 +53,7 @@
     "thumbnail": "https://i.ytimg.com/vi/bnnacleqg6k/maxresdefault.jpg",
     "author": "Strange Loop Conference",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860426Z"
+    "addedAt": "2025-11-16T20:02:05.860426Z"
   },
   "https://www.youtube.com/watch?v=tsTeEkzO9xc": {
     "url": "https://www.youtube.com/watch?v=tsTeEkzO9xc",
@@ -61,7 +61,7 @@
     "thumbnail": "https://i.ytimg.com/vi/tsTeEkzO9xc/maxresdefault.jpg",
     "author": "Berkeley SkyDeck",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860431Z"
+    "addedAt": "2025-11-16T20:02:05.860431Z"
   },
   "https://www.youtube.com/watch?v=oV9rvDllKEg": {
     "url": "https://www.youtube.com/watch?v=oV9rvDllKEg",
@@ -69,7 +69,7 @@
     "thumbnail": "https://i.ytimg.com/vi/oV9rvDllKEg/maxresdefault.jpg",
     "author": "gnbitcom",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860433Z"
+    "addedAt": "2025-11-16T20:02:05.860433Z"
   },
   "https://www.youtube.com/watch?v=MSi3E5Z8oRw": {
     "url": "https://www.youtube.com/watch?v=MSi3E5Z8oRw",
@@ -77,7 +77,7 @@
     "thumbnail": "https://i.ytimg.com/vi/MSi3E5Z8oRw/maxresdefault.jpg",
     "author": "Ryan Levick",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860436Z"
+    "addedAt": "2025-11-16T20:02:05.860436Z"
   },
   "https://www.youtube.com/watch?v=8O0Nt9qY_vo": {
     "url": "https://www.youtube.com/watch?v=8O0Nt9qY_vo",
@@ -85,7 +85,7 @@
     "thumbnail": "https://i.ytimg.com/vi/8O0Nt9qY_vo/maxresdefault.jpg",
     "author": "Jon Gjengset",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860438Z"
+    "addedAt": "2025-11-16T20:02:05.860438Z"
   },
   "https://www.youtube.com/watch?v=Rd_04vVLE-4": {
     "url": "https://www.youtube.com/watch?v=Rd_04vVLE-4",
@@ -93,7 +93,7 @@
     "thumbnail": "https://i.ytimg.com/vi/Rd_04vVLE-4/maxresdefault.jpg",
     "author": "Bankless",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860440Z"
+    "addedAt": "2025-11-16T20:02:05.860440Z"
   },
   "https://www.youtube.com/watch?v=7xTGNNLPyMI": {
     "url": "https://www.youtube.com/watch?v=7xTGNNLPyMI",
@@ -101,7 +101,7 @@
     "thumbnail": "https://i.ytimg.com/vi/7xTGNNLPyMI/maxresdefault.jpg",
     "author": "Andrej Karpathy",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860442Z"
+    "addedAt": "2025-11-16T20:02:05.860442Z"
   },
   "https://www.youtube.com/watch?v=KJtZARuO3JY": {
     "url": "https://www.youtube.com/watch?v=KJtZARuO3JY",
@@ -109,7 +109,7 @@
     "thumbnail": "https://i.ytimg.com/vi/KJtZARuO3JY/maxresdefault.jpg",
     "author": "Grant Sanderson",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860444Z"
+    "addedAt": "2025-11-16T20:02:05.860444Z"
   },
   "https://www.youtube.com/watch?v=b1e4t2k2KJY": {
     "url": "https://www.youtube.com/watch?v=b1e4t2k2KJY",
@@ -117,7 +117,7 @@
     "thumbnail": "https://i.ytimg.com/vi/b1e4t2k2KJY/maxresdefault.jpg",
     "author": "Jane Street",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860449Z"
+    "addedAt": "2025-11-16T20:02:05.860449Z"
   },
   "https://www.youtube.com/watch?v=8uAW5FQtcvE": {
     "url": "https://www.youtube.com/watch?v=8uAW5FQtcvE",
@@ -125,7 +125,7 @@
     "thumbnail": "https://i.ytimg.com/vi/8uAW5FQtcvE/maxresdefault.jpg",
     "author": "Meeting Cpp",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860451Z"
+    "addedAt": "2025-11-16T20:02:05.860451Z"
   },
   "https://www.youtube.com/watch?v=mNOLaw-_Buc": {
     "url": "https://www.youtube.com/watch?v=mNOLaw-_Buc",
@@ -133,7 +133,7 @@
     "thumbnail": "https://i.ytimg.com/vi/mNOLaw-_Buc/maxresdefault.jpg",
     "author": "Jon Gjengset",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860454Z"
+    "addedAt": "2025-11-16T20:02:05.860454Z"
   },
   "https://www.youtube.com/watch?v=0ML7ZLMdcl4": {
     "url": "https://www.youtube.com/watch?v=0ML7ZLMdcl4",
@@ -141,7 +141,7 @@
     "thumbnail": "https://i.ytimg.com/vi/0ML7ZLMdcl4/maxresdefault.jpg",
     "author": "AI Engineer",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860456Z"
+    "addedAt": "2025-11-16T20:02:05.860456Z"
   },
   "https://www.youtube.com/watch?v=UPtG_38Oq8o": {
     "url": "https://www.youtube.com/watch?v=UPtG_38Oq8o",
@@ -149,7 +149,7 @@
     "thumbnail": "https://i.ytimg.com/vi/UPtG_38Oq8o/maxresdefault.jpg",
     "author": "Serrano.Academy",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860458Z"
+    "addedAt": "2025-11-16T20:02:05.860458Z"
   },
   "https://www.youtube.com/watch?v=uk6vxNNB9_c": {
     "url": "https://www.youtube.com/watch?v=uk6vxNNB9_c",
@@ -157,7 +157,7 @@
     "thumbnail": "https://i.ytimg.com/vi/uk6vxNNB9_c/maxresdefault.jpg",
     "author": "Lightspeed",
     "type": "youtube",
-    "fetchedAt": "2025-11-16T20:02:05.860460Z"
+    "addedAt": "2025-11-16T20:02:05.860460Z"
   },
   "https://world.hey.com/dhh/programmers-should-stop-celebrating-incompetence-de1a4725": {
     "url": "https://world.hey.com/dhh/programmers-should-stop-celebrating-incompetence-de1a4725",
@@ -165,7 +165,7 @@
     "image": "https://world.hey.com/dhh/de1a4725/representations/eyJfcmFpbHMiOnsiZGF0YSI6NjE2NjQ3ODkyLCJwdXIiOiJibG9iX2lkIn19--1f1f64293fde20d21e91db80f6a178dd401f3fe67e31356fd783478fdd3af275/eyJfcmFpbHMiOnsiZGF0YSI6eyJyZXNpemVfdG9fZmlsbCI6WzEyMDAsNjMwXSwicXVhbGl0eSI6NDAsInN0cmlwIjp0cnVlfSwicHVyIjoidmFyaWF0aW9uIn19--850460abb6619f326eb585ef63fdb0b416ee8bffff0b16dfc60dcb6699d89ebd/i%20have%20no%20idea%20what%20i%20am%20doing%20dog%20meme.jpg",
     "description": "In the valiant effort to combat imposter syndrome and gatekeeping, the programming world has taken a bad turn down a blind alley by celebrating incompetence.",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://blog.cloudflare.com/cloud-computing-without-containers": {
     "url": "https://blog.cloudflare.com/cloud-computing-without-containers",
@@ -173,7 +173,7 @@
     "image": "https://cf-assets.www.cloudflare.com/slt3lc6tev37/1bfAGbVEKKkgMI4yIAscgW/2f60d3ff7f747d68f30bcee1d4d13f0b/cloud-computing-without-containers-OGP.png",
     "description": "How Cloudflare uses the ecosystem around JavaScript Web standards to enable cloud computing without traditional containers",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://slurm.schedmd.com/documentation.html": {
     "url": "https://slurm.schedmd.com/documentation.html",
@@ -181,7 +181,7 @@
     "image": null,
     "description": "Slurm is an open source workload manager designed for Linux clusters",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://www.canva.dev/blog/engineering/machine-learning-hyperparameter-optimization-with-argo/": {
     "url": "https://www.canva.dev/blog/engineering/machine-learning-hyperparameter-optimization-with-argo/",
@@ -189,7 +189,7 @@
     "image": null,
     "description": "How Canva approaches machine learning hyperparameter optimization using Argo Workflows",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://leptos.dev/": {
     "url": "https://leptos.dev/",
@@ -197,7 +197,7 @@
     "image": "https://www.leptos.dev/social_preview.webp",
     "description": "A cutting-edge Rust framework for building web applications",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://x.com/retentionjunkie/status/1811160285429805336": {
     "url": "https://x.com/retentionjunkie/status/1811160285429805336",
@@ -205,7 +205,7 @@
     "image": null,
     "description": "Tweet from @retentionjunkie",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://manybutfinite.com/post/journey-to-the-stack/": {
     "url": "https://manybutfinite.com/post/journey-to-the-stack/",
@@ -213,7 +213,7 @@
     "image": null,
     "description": "A deep dive into how the program stack works",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://github.com/pretzelhammer/rust-blog/blob/master/posts/common-rust-lifetime-misconceptions.md#2-if-t-static-then-t-must-be-valid-for-the-entire-program": {
     "url": "https://github.com/pretzelhammer/rust-blog/blob/master/posts/common-rust-lifetime-misconceptions.md#2-if-t-static-then-t-must-be-valid-for-the-entire-program",
@@ -221,7 +221,7 @@
     "image": "https://opengraph.githubassets.com/default",
     "description": "Understanding Rust lifetime misconceptions - if T: 'static then T must be valid for the entire program",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://github.com/saikatharryc/helm/tree/master/charts/judge0": {
     "url": "https://github.com/saikatharryc/helm/tree/master/charts/judge0",
@@ -229,7 +229,7 @@
     "image": "https://opengraph.githubassets.com/default",
     "description": "Helm chart for deploying Judge0 code execution system",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://github.com/parseablehq/parseable/tree/main": {
     "url": "https://github.com/parseablehq/parseable/tree/main",
@@ -237,7 +237,7 @@
     "image": "https://opengraph.githubassets.com/default",
     "description": "Cloud native log analytics platform built in Rust",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://github.com/Glimesh/broadcast-box/blob/main/internal/webrtc/webrtc.go": {
     "url": "https://github.com/Glimesh/broadcast-box/blob/main/internal/webrtc/webrtc.go",
@@ -245,7 +245,7 @@
     "image": "https://opengraph.githubassets.com/default",
     "description": "WebRTC implementation in Go for streaming platform",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://eips.ethereum.org/EIPS/eip-1967": {
     "url": "https://eips.ethereum.org/EIPS/eip-1967",
@@ -253,7 +253,7 @@
     "image": null,
     "description": "Ethereum Improvement Proposal for standardizing proxy storage slots",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://github.com/rust-lang/rust/blob/71e06b9c59d6af50fdc55aed75620493d29baf98/compiler/rustc_borrowck/src/lib.rs#L1563": {
     "url": "https://github.com/rust-lang/rust/blob/71e06b9c59d6af50fdc55aed75620493d29baf98/compiler/rustc_borrowck/src/lib.rs#L1563",
@@ -261,7 +261,7 @@
     "image": "https://opengraph.githubassets.com/default",
     "description": "Rust compiler borrow checker implementation source code",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://craftinginterpreters.com/": {
     "url": "https://craftinginterpreters.com/",
@@ -269,7 +269,7 @@
     "image": "https://craftinginterpreters.com/image/social.png",
     "description": "A handbook for making programming languages by Robert Nystrom",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://arun.chagantys.org/posts/on-evaluation.html": {
     "url": "https://arun.chagantys.org/posts/on-evaluation.html",
@@ -277,7 +277,7 @@
     "image": null,
     "description": "Thoughts on evaluation in software engineering and systems research",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://www.cse.iitb.ac.in/%7Emp/crypto/mpc2017/": {
     "url": "https://www.cse.iitb.ac.in/%7Emp/crypto/mpc2017/",
@@ -285,7 +285,7 @@
     "image": null,
     "description": "IIT Bombay course on cryptography and secure multi-party computation",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://simonwillison.net/": {
     "url": "https://simonwillison.net/",
@@ -293,7 +293,7 @@
     "image": "https://static.simonwillison.net/static/2024/simon-og.jpg",
     "description": "Blog about Python, LLMs, AI, databases, and web development by Simon Willison",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://bun.com/blog/behind-the-scenes-of-bun-install": {
     "url": "https://bun.com/blog/behind-the-scenes-of-bun-install",
@@ -301,7 +301,7 @@
     "image": "https://bun.sh/og-image.png",
     "description": "How Bun's package installer works under the hood",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://webrtchacks.com/how-openai-does-webrtc-in-the-new-gpt-realtime/": {
     "url": "https://webrtchacks.com/how-openai-does-webrtc-in-the-new-gpt-realtime/",
@@ -309,7 +309,7 @@
     "image": null,
     "description": "Analysis of OpenAI's WebRTC implementation in the GPT realtime API",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://bun.com/docs/runtime/ffi": {
     "url": "https://bun.com/docs/runtime/ffi",
@@ -317,7 +317,7 @@
     "image": "https://bun.sh/og-image.png",
     "description": "Foreign Function Interface (FFI) in Bun runtime documentation",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   },
   "https://x.com/Baheet_/status/1965758390430208066": {
     "url": "https://x.com/Baheet_/status/1965758390430208066",
@@ -325,6 +325,6 @@
     "image": null,
     "description": "Tweet from @Baheet_",
     "type": "website",
-    "fetchedAt": "2025-11-16T20:02:05.860499Z"
+    "addedAt": "2025-11-16T20:02:05.860499Z"
   }
 }

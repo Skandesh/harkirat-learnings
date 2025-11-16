@@ -43,7 +43,7 @@ async function fetchYouTubeMetadata(url) {
       thumbnail: `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`,
       author: data.author_name || '',
       type: 'youtube',
-      fetchedAt: new Date().toISOString()
+      addedAt: new Date().toISOString()
     };
   } catch (error) {
     // Fallback
@@ -52,7 +52,7 @@ async function fetchYouTubeMetadata(url) {
       title: 'YouTube Video',
       thumbnail: `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`,
       type: 'youtube',
-      fetchedAt: new Date().toISOString()
+      addedAt: new Date().toISOString()
     };
   }
 }
@@ -97,7 +97,7 @@ async function fetchWebsiteMetadata(url) {
       image: ogData.image || null,
       description: ogData.description || '',
       type: 'website',
-      fetchedAt: new Date().toISOString()
+      addedAt: new Date().toISOString()
     };
   } catch (error) {
     // Fallback with domain name
@@ -108,7 +108,7 @@ async function fetchWebsiteMetadata(url) {
       image: null,
       description: '',
       type: 'website',
-      fetchedAt: new Date().toISOString()
+      addedAt: new Date().toISOString()
     };
   }
 }

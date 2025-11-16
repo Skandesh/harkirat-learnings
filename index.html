@@ -376,8 +376,7 @@
         <div id="links-container"></div>
 
         <footer>
-            <p>Auto-updates every 30 minutes via GitHub Actions</p>
-            <p>Built with ❤️ for the learning community</p>
+            <p>Auto-updates every 900 minutes via GitHub Actions</p>
         </footer>
     </div>
 
@@ -400,7 +399,7 @@
                 allLinks = Object.values(data);
 
                 // Sort by date (newest first)
-                allLinks.sort((a, b) => new Date(b.fetchedAt) - new Date(a.fetchedAt));
+                allLinks.sort((a, b) => new Date(b.addedAt || b.fetchedAt) - new Date(a.addedAt || a.fetchedAt));
 
                 // Update stats
                 const youtubeCount = allLinks.filter(link => link.type === 'youtube').length;
@@ -489,7 +488,7 @@
                 : '';
 
             // Format date
-            const dateAdded = link.fetchedAt ? formatDate(link.fetchedAt) : '';
+            const dateAdded = link.addedAt ? formatDate(link.addedAt) : (link.fetchedAt ? formatDate(link.fetchedAt) : '');
 
             card.innerHTML = `
                 ${thumbnailHTML}
