@@ -95,7 +95,7 @@ Your site will be live at: `https://<username>.github.io/<repo-name>/`
 
 ## Manual Testing
 
-Run the script locally to fetch links:
+### Fetch new links metadata:
 
 ```bash
 node scripts/fetch-metadata.js
@@ -106,6 +106,26 @@ This will:
 2. Extract all links
 3. Fetch metadata for new links
 4. Update `links-data.json`
+
+### Update dates with accurate git history (one-time migration):
+
+To get the **actual dates** when links were added to the repository:
+
+```bash
+node scripts/update-dates-from-git.js
+```
+
+Or use the bash version:
+
+```bash
+bash scripts/update-dates-from-git.sh
+```
+
+This will:
+1. Query GitHub's commit history for README.md
+2. Find when each URL was first added
+3. Update `addedAt` with the actual commit date
+4. **Note**: This makes many API calls and may take 10-20 minutes
 
 Then open `index.html` in your browser to see the gallery.
 
