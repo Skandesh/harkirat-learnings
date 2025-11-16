@@ -1,82 +1,330 @@
 {
-  "https://www.youtube.com/watch?v=8pTEmbeENF4": {
-    "url": "https://www.youtube.com/watch?v=8pTEmbeENF4",
-    "title": "100xDevs Cohort 2.0 - Full Stack Development",
-    "thumbnail": "https://i.ytimg.com/vi/8pTEmbeENF4/maxresdefault.jpg",
-    "author": "Harkirat Singh",
+  "https://www.youtube.com/watch?v=TZ5a3gCCZYo": {
+    "url": "https://www.youtube.com/watch?v=TZ5a3gCCZYo",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/TZ5a3gCCZYo/maxresdefault.jpg",
+    "author": "",
     "type": "youtube",
-    "fetchedAt": "2025-01-16T10:30:00.000Z"
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
   },
-  "https://www.youtube.com/watch?v=nu_pCVPKzTk": {
-    "url": "https://www.youtube.com/watch?v=nu_pCVPKzTk",
-    "title": "System Design for Beginners",
-    "thumbnail": "https://i.ytimg.com/vi/nu_pCVPKzTk/maxresdefault.jpg",
-    "author": "Harkirat Singh",
+  "https://www.youtube.com/watch?v=7z5FwdfL7v4": {
+    "url": "https://www.youtube.com/watch?v=7z5FwdfL7v4",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/7z5FwdfL7v4/maxresdefault.jpg",
+    "author": "",
     "type": "youtube",
-    "fetchedAt": "2025-01-16T10:31:00.000Z"
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
   },
-  "https://react.dev/": {
-    "url": "https://react.dev/",
-    "title": "React - The library for web and native user interfaces",
-    "image": "https://react.dev/images/og-home.png",
-    "description": "React is the library for web and native user interfaces. Build user interfaces out of individual pieces called components written in JavaScript.",
-    "type": "website",
-    "fetchedAt": "2025-01-16T10:32:00.000Z"
-  },
-  "https://nextjs.org/": {
-    "url": "https://nextjs.org/",
-    "title": "Next.js by Vercel - The React Framework",
-    "image": "https://nextjs.org/og-image.png",
-    "description": "Next.js by Vercel is the full-stack React framework for the web.",
-    "type": "website",
-    "fetchedAt": "2025-01-16T10:33:00.000Z"
-  },
-  "https://www.youtube.com/watch?v=RLtyhwFtXQA": {
-    "url": "https://www.youtube.com/watch?v=RLtyhwFtXQA",
-    "title": "Docker Tutorial for Beginners",
-    "thumbnail": "https://i.ytimg.com/vi/RLtyhwFtXQA/maxresdefault.jpg",
-    "author": "Harkirat Singh",
+  "https://www.youtube.com/watch?v=8bDgWvyglno": {
+    "url": "https://www.youtube.com/watch?v=8bDgWvyglno",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/8bDgWvyglno/maxresdefault.jpg",
+    "author": "",
     "type": "youtube",
-    "fetchedAt": "2025-01-16T10:34:00.000Z"
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
   },
-  "https://nodejs.org/": {
-    "url": "https://nodejs.org/",
-    "title": "Node.js — Run JavaScript Everywhere",
-    "image": "https://nodejs.org/static/images/logo-hexagon-card.png",
-    "description": "Node.js® is a free, open-source, cross-platform JavaScript runtime environment.",
-    "type": "website",
-    "fetchedAt": "2025-01-16T10:35:00.000Z"
-  },
-  "https://www.typescriptlang.org/": {
-    "url": "https://www.typescriptlang.org/",
-    "title": "TypeScript: JavaScript With Syntax For Types",
-    "image": "https://www.typescriptlang.org/images/branding/ts-lettermark-blue.png",
-    "description": "TypeScript is a strongly typed programming language that builds on JavaScript.",
-    "type": "website",
-    "fetchedAt": "2025-01-16T10:36:00.000Z"
-  },
-  "https://www.youtube.com/watch?v=WpkDN78P884": {
-    "url": "https://www.youtube.com/watch?v=WpkDN78P884",
-    "title": "PostgreSQL Tutorial - Database Fundamentals",
-    "thumbnail": "https://i.ytimg.com/vi/WpkDN78P884/maxresdefault.jpg",
-    "author": "Harkirat Singh",
+  "https://www.youtube.com/watch?v=QL_yJWI-kNI": {
+    "url": "https://www.youtube.com/watch?v=QL_yJWI-kNI",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/QL_yJWI-kNI/maxresdefault.jpg",
+    "author": "",
     "type": "youtube",
-    "fetchedAt": "2025-01-16T10:37:00.000Z"
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
   },
-  "https://tailwindcss.com/": {
-    "url": "https://tailwindcss.com/",
-    "title": "Tailwind CSS - Rapidly build modern websites",
-    "image": "https://tailwindcss.com/_next/static/media/social-card-large.a6e71726.jpg",
-    "description": "A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.",
-    "type": "website",
-    "fetchedAt": "2025-01-16T10:38:00.000Z"
+  "https://www.youtube.com/watch?v=l8pRSuU81PU": {
+    "url": "https://www.youtube.com/watch?v=l8pRSuU81PU",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/l8pRSuU81PU/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
   },
-  "https://www.prisma.io/": {
-    "url": "https://www.prisma.io/",
-    "title": "Prisma | Next-generation ORM for Node.js & TypeScript",
-    "image": "https://prismalens.vercel.app/header/logo-dark.svg",
-    "description": "Prisma is a next-generation ORM that consists of these tools: Prisma Client, Prisma Migrate, and Prisma Studio.",
+  "https://world.hey.com/dhh/programmers-should-stop-celebrating-incompetence-de1a4725": {
+    "url": "https://world.hey.com/dhh/programmers-should-stop-celebrating-incompetence-de1a4725",
+    "title": "Programmers should stop celebrating incompetence",
+    "image": null,
+    "description": "An argument against self-deprecating culture in programming and a call for developers to pursue mastery and competence rather than embracing incompetence.",
     "type": "website",
-    "fetchedAt": "2025-01-16T10:39:00.000Z"
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=4YU_r70yGjQ": {
+    "url": "https://www.youtube.com/watch?v=4YU_r70yGjQ",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/4YU_r70yGjQ/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://blog.cloudflare.com/cloud-computing-without-containers": {
+    "url": "https://blog.cloudflare.com/cloud-computing-without-containers",
+    "title": "Cloud computing without containers",
+    "image": null,
+    "description": "Cloudflare's approach to cloud computing without traditional containers",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=bnnacleqg6k": {
+    "url": "https://www.youtube.com/watch?v=bnnacleqg6k",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/bnnacleqg6k/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=tsTeEkzO9xc": {
+    "url": "https://www.youtube.com/watch?v=tsTeEkzO9xc",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/tsTeEkzO9xc/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=oV9rvDllKEg": {
+    "url": "https://www.youtube.com/watch?v=oV9rvDllKEg",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/oV9rvDllKEg/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=MSi3E5Z8oRw": {
+    "url": "https://www.youtube.com/watch?v=MSi3E5Z8oRw",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/MSi3E5Z8oRw/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://slurm.schedmd.com/documentation.html": {
+    "url": "https://slurm.schedmd.com/documentation.html",
+    "title": "SLURM Documentation",
+    "image": null,
+    "description": "Slurm Workload Manager documentation",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.canva.dev/blog/engineering/machine-learning-hyperparameter-optimization-with-argo/": {
+    "url": "https://www.canva.dev/blog/engineering/machine-learning-hyperparameter-optimization-with-argo/",
+    "title": "Machine Learning Hyperparameter Optimization with Argo",
+    "image": null,
+    "description": "Canva's approach to ML hyperparameter optimization using Argo",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://leptos.dev/": {
+    "url": "https://leptos.dev/",
+    "title": "Leptos",
+    "image": null,
+    "description": "A cutting-edge Rust framework for building web applications",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://x.com/retentionjunkie/status/1811160285429805336": {
+    "url": "https://x.com/retentionjunkie/status/1811160285429805336",
+    "title": "X Post",
+    "image": null,
+    "description": "Tweet from @retentionjunkie",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://manybutfinite.com/post/journey-to-the-stack/": {
+    "url": "https://manybutfinite.com/post/journey-to-the-stack/",
+    "title": "Journey to the Stack",
+    "image": null,
+    "description": "Deep dive into the program stack",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=8O0Nt9qY_vo": {
+    "url": "https://www.youtube.com/watch?v=8O0Nt9qY_vo",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/8O0Nt9qY_vo/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://github.com/pretzelhammer/rust-blog/blob/master/posts/common-rust-lifetime-misconceptions.md#2-if-t-static-then-t-must-be-valid-for-the-entire-program": {
+    "url": "https://github.com/pretzelhammer/rust-blog/blob/master/posts/common-rust-lifetime-misconceptions.md#2-if-t-static-then-t-must-be-valid-for-the-entire-program",
+    "title": "Common Rust Lifetime Misconceptions",
+    "image": null,
+    "description": "Understanding Rust lifetime misconceptions",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://github.com/saikatharryc/helm/tree/master/charts/judge0": {
+    "url": "https://github.com/saikatharryc/helm/tree/master/charts/judge0",
+    "title": "Judge0 Helm Chart",
+    "image": null,
+    "description": "Helm chart for Judge0 deployment",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=Rd_04vVLE-4": {
+    "url": "https://www.youtube.com/watch?v=Rd_04vVLE-4",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/Rd_04vVLE-4/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://github.com/parseablehq/parseable/tree/main": {
+    "url": "https://github.com/parseablehq/parseable/tree/main",
+    "title": "Parseable - Log Analytics",
+    "image": null,
+    "description": "Cloud native log analytics platform",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=7xTGNNLPyMI": {
+    "url": "https://www.youtube.com/watch?v=7xTGNNLPyMI",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/7xTGNNLPyMI/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://github.com/Glimesh/broadcast-box/blob/main/internal/webrtc/webrtc.go": {
+    "url": "https://github.com/Glimesh/broadcast-box/blob/main/internal/webrtc/webrtc.go",
+    "title": "Glimesh WebRTC Implementation",
+    "image": null,
+    "description": "WebRTC implementation in Go for streaming",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://eips.ethereum.org/EIPS/eip-1967": {
+    "url": "https://eips.ethereum.org/EIPS/eip-1967",
+    "title": "EIP-1967: Proxy Storage Slots",
+    "image": null,
+    "description": "Ethereum Improvement Proposal for standardizing proxy storage slots",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=KJtZARuO3JY": {
+    "url": "https://www.youtube.com/watch?v=KJtZARuO3JY",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/KJtZARuO3JY/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=b1e4t2k2KJY": {
+    "url": "https://www.youtube.com/watch?v=b1e4t2k2KJY",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/b1e4t2k2KJY/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=8uAW5FQtcvE": {
+    "url": "https://www.youtube.com/watch?v=8uAW5FQtcvE",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/8uAW5FQtcvE/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://github.com/rust-lang/rust/blob/71e06b9c59d6af50fdc55aed75620493d29baf98/compiler/rustc_borrowck/src/lib.rs#L1563": {
+    "url": "https://github.com/rust-lang/rust/blob/71e06b9c59d6af50fdc55aed75620493d29baf98/compiler/rustc_borrowck/src/lib.rs#L1563",
+    "title": "Rust Borrow Checker Source Code",
+    "image": null,
+    "description": "Rust compiler borrow checker implementation",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://craftinginterpreters.com/": {
+    "url": "https://craftinginterpreters.com/",
+    "title": "Crafting Interpreters",
+    "image": null,
+    "description": "A handbook for making programming languages",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=mNOLaw-_Buc": {
+    "url": "https://www.youtube.com/watch?v=mNOLaw-_Buc",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/mNOLaw-_Buc/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=0ML7ZLMdcl4": {
+    "url": "https://www.youtube.com/watch?v=0ML7ZLMdcl4",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/0ML7ZLMdcl4/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://arun.chagantys.org/posts/on-evaluation.html": {
+    "url": "https://arun.chagantys.org/posts/on-evaluation.html",
+    "title": "On Evaluation",
+    "image": null,
+    "description": "Thoughts on evaluation in software and systems",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=UPtG_38Oq8o": {
+    "url": "https://www.youtube.com/watch?v=UPtG_38Oq8o",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/UPtG_38Oq8o/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=uk6vxNNB9_c": {
+    "url": "https://www.youtube.com/watch?v=uk6vxNNB9_c",
+    "title": "YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/uk6vxNNB9_c/maxresdefault.jpg",
+    "author": "",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://www.cse.iitb.ac.in/%7Emp/crypto/mpc2017/": {
+    "url": "https://www.cse.iitb.ac.in/%7Emp/crypto/mpc2017/",
+    "title": "Multi-Party Computation Course",
+    "image": null,
+    "description": "IIT Bombay course on cryptography and MPC",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://simonwillison.net/": {
+    "url": "https://simonwillison.net/",
+    "title": "Simon Willison's Weblog",
+    "image": null,
+    "description": "Blog about Python, LLMs, and web development",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://bun.com/blog/behind-the-scenes-of-bun-install": {
+    "url": "https://bun.com/blog/behind-the-scenes-of-bun-install",
+    "title": "Behind the Scenes of Bun Install",
+    "image": null,
+    "description": "How Bun's package installer works under the hood",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://webrtchacks.com/how-openai-does-webrtc-in-the-new-gpt-realtime/": {
+    "url": "https://webrtchacks.com/how-openai-does-webrtc-in-the-new-gpt-realtime/",
+    "title": "How OpenAI Does WebRTC in GPT Realtime",
+    "image": null,
+    "description": "Analysis of OpenAI's WebRTC implementation in GPT realtime API",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://bun.com/docs/runtime/ffi": {
+    "url": "https://bun.com/docs/runtime/ffi",
+    "title": "Bun FFI Documentation",
+    "image": null,
+    "description": "Foreign Function Interface in Bun runtime",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
+  },
+  "https://x.com/Baheet_/status/1965758390430208066": {
+    "url": "https://x.com/Baheet_/status/1965758390430208066",
+    "title": "X Post",
+    "image": null,
+    "description": "Tweet from @Baheet_",
+    "type": "website",
+    "fetchedAt": "2025-01-16T12:00:00.000Z"
   }
 }
