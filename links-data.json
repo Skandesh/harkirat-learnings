@@ -1,0 +1,18 @@
+{
+  "https://www.youtube.com/watch?v=dQw4w9WgXcQ": {
+    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "title": "Example YouTube Video",
+    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "author": "Example Channel",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T00:00:00.000Z"
+  },
+  "https://example.com": {
+    "url": "https://example.com",
+    "title": "Example Website",
+    "image": null,
+    "description": "This is an example website entry",
+    "type": "website",
+    "fetchedAt": "2025-01-16T00:00:00.000Z"
+  }
+}
