@@ -10,7 +10,13 @@ count=0
 
 # Fetch commit history once
 echo "📥 Fetching commit history from GitHub..."
-commits=$(curl -s "https://api.github.com/repos/hkirat/what-im-learning/commits?path=README.md&per_page=100")
+
+# Build curl command with optional auth token
+if [ -n "$GITHUB_TOKEN" ]; then
+  commits=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "https://api.github.com/repos/hkirat/what-im-learning/commits?path=README.md&per_page=100")
+else
+  commits=$(curl -s "https://api.github.com/repos/hkirat/what-im-learning/commits?path=README.md&per_page=100")
+fi
 
 if [ $? -ne 0 ]; then
   echo "❌ Failed to fetch commits"
@@ -47,7 +53,11 @@ echo "$urls" | while read -r url; do
 
   for sha in $shas; do
     # Get the commit details with patch
-    commit_data=$(curl -s "https://api.github.com/repos/hkirat/what-im-learning/commits/$sha")
+    if [ -n "$GITHUB_TOKEN" ]; then
+      commit_data=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "https://api.github.com/repos/hkirat/what-im-learning/commits/$sha")
+    else
+      commit_data=$(curl -s "https://api.github.com/repos/hkirat/what-im-learning/commits/$sha")
+    fi
 
     # Check if the URL was added in this commit
     patch=$(echo "$commit_data" | jq -r '.files[]? | select(.filename == "README.md") | .patch // empty')

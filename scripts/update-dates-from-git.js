@@ -4,7 +4,14 @@ const fs = require('fs');
 // Helper function to make HTTPS requests
 function fetch(url) {
   return new Promise((resolve, reject) => {
-    https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (res) => {
+    const headers = { 'User-Agent': 'Mozilla/5.0' };
+
+    // Add GitHub token if available (for better rate limits)
+    if (process.env.GITHUB_TOKEN) {
+      headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
+    }
+
+    https.get(url, { headers }, (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => resolve({

@@ -7,7 +7,7 @@ A beautiful, auto-updating link gallery that showcases curated learning resource
 - **Smart Caching** - Fetches metadata once and stores it. Never re-fetches existing links.
 - **YouTube Integration** - Shows video thumbnails and titles for YouTube links.
 - **Open Graph Support** - Displays images, titles, and descriptions for websites.
-- **Auto-Updates** - GitHub Actions runs every 30 minutes to fetch new links.
+- **Auto-Updates** - GitHub Actions runs every 15 hours to fetch new links and update dates.
 - **Beautiful UI** - Modern, responsive card-based design with dark theme.
 - **Filter by Type** - Easily filter between YouTube videos and websites.
 - **Zero Maintenance** - Fully automated via GitHub Actions.
@@ -18,7 +18,7 @@ A beautiful, auto-updating link gallery that showcases curated learning resource
 
 ```
 ┌─────────────────────────────────────────────┐
-│  GitHub Action (runs every 30 min)         │
+│  GitHub Action (runs every 15 hours)        │
 ├─────────────────────────────────────────────┤
 │  1. Fetch README.md from hkirat's repo      │
 │  2. Load existing links-data.json           │
@@ -26,8 +26,11 @@ A beautiful, auto-updating link gallery that showcases curated learning resource
 │  4. For new links:                          │
 │     - YouTube: extract ID, get thumbnail    │
 │     - Others: fetch Open Graph data         │
-│  5. Merge with existing data                │
-│  6. Save updated links-data.json to repo    │
+│  5. Query git history for accurate dates    │
+│     - Uses GitHub token for 5000 req/hr     │
+│     - Skips links with existing dates       │
+│  6. Merge with existing data                │
+│  7. Save updated links-data.json to repo    │
 └─────────────────────────────────────────────┘
                     ↓
 ┌─────────────────────────────────────────────┐
@@ -137,8 +140,9 @@ Edit `.github/workflows/fetch-links.yml`:
 
 ```yaml
 schedule:
-  - cron: '*/30 * * * *'  # Every 30 minutes
+  - cron: '0 */15 * * *'  # Every 15 hours (900 minutes) - current setting
   # Change to:
+  - cron: '*/30 * * * *'  # Every 30 minutes
   - cron: '0 * * * *'     # Every hour
   - cron: '0 */6 * * *'   # Every 6 hours
 ```
