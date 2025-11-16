@@ -46,7 +46,6 @@ async function fetchYouTubeMetadata(url) {
       fetchedAt: new Date().toISOString()
     };
   } catch (error) {
-    console.error(`Failed to fetch YouTube metadata for ${url}:`, error.message);
     // Fallback
     return {
       url,
@@ -101,7 +100,6 @@ async function fetchWebsiteMetadata(url) {
       fetchedAt: new Date().toISOString()
     };
   } catch (error) {
-    console.error(`Failed to fetch metadata for ${url}:`, error.message);
     // Fallback with domain name
     const domain = new URL(url).hostname;
     return {
@@ -141,81 +139,56 @@ function parseLinks(content) {
 
 // Main function
 async function main() {
-  console.log('🚀 Starting link metadata fetch...\n');
-
   // Step 1: Fetch README from hkirat's repo
-  console.log('📥 Fetching README from hkirat/what-im-learning...');
   const repoUrl = 'https://api.github.com/repos/hkirat/what-im-learning/contents/README.md';
 
   try {
     const response = await fetch(repoUrl);
     const data = await response.json();
     const readmeContent = Buffer.from(data.content, 'base64').toString('utf-8');
-    console.log('✅ README fetched successfully\n');
 
     // Step 2: Parse links from README
-    console.log('🔍 Parsing links from README...');
     const extractedLinks = parseLinks(readmeContent);
-    console.log(`✅ Found ${extractedLinks.length} links\n`);
 
     // Step 3: Load existing data
-    console.log('📂 Loading existing links-data.json...');
     let existingData = {};
     try {
       const fileContent = fs.readFileSync('links-data.json', 'utf-8');
       existingData = JSON.parse(fileContent);
-      console.log(`✅ Loaded ${Object.keys(existingData).length} existing entries\n`);
     } catch (error) {
-      console.log('⚠️  No existing data found, starting fresh\n');
+      // No existing data found, starting fresh
     }
 
     // Step 4: Compare and find NEW links only
-    console.log('🔎 Comparing with existing data...');
     const newLinks = extractedLinks.filter(url => !existingData[url]);
-    console.log(`✅ Found ${newLinks.length} new links to fetch\n`);
 
     // Step 5: Fetch metadata for new links
     if (newLinks.length > 0) {
-      console.log('🌐 Fetching metadata for new links...');
       for (let i = 0; i < newLinks.length; i++) {
         const url = newLinks[i];
-        console.log(`  [${i + 1}/${newLinks.length}] Fetching: ${url}`);
 
         const metadata = await fetchMetadata(url);
         if (metadata) {
           existingData[url] = metadata;
-          console.log(`    ✅ ${metadata.title}`);
         }
 
         // Small delay to avoid rate limiting
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
-      console.log('\n✅ All new links processed\n');
-    } else {
-      console.log('✨ No new links to fetch. Data is up to date!\n');
     }
 
     // Step 6: Remove links that are no longer in README (optional)
-    console.log('🧹 Cleaning up removed links...');
     const currentLinksSet = new Set(extractedLinks);
-    let removedCount = 0;
     for (const url in existingData) {
       if (!currentLinksSet.has(url)) {
         delete existingData[url];
-        removedCount++;
       }
     }
-    console.log(`✅ Removed ${removedCount} obsolete entries\n`);
 
     // Step 7: Save updated data
-    console.log('💾 Saving updated links-data.json...');
     fs.writeFileSync('links-data.json', JSON.stringify(existingData, null, 2));
-    console.log('✅ Data saved successfully\n');
-
-    console.log(`🎉 Complete! Total links in storage: ${Object.keys(existingData).length}`);
 
   } catch (error) {
-    console.error('❌ Error:', error.message);
     process.exit(1);
   }
 }
