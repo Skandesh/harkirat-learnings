@@ -95,13 +95,24 @@ async function main() {
 
   const urls = Object.keys(data);
   let processed = 0;
+  let skipped = 0;
+  let fetched = 0;
 
   for (const url of urls) {
     processed++;
+
+    // Skip if this URL already has an addedAt date (optimization!)
+    if (data[url].addedAt && !data[url].addedAt.includes('2025-11-16T20:02')) {
+      skipped++;
+      console.log(`[${processed}/${urls.length}] ⏭  Skipping (already has date): ${url.substring(0, 50)}...`);
+      continue;
+    }
+
     console.log(`[${processed}/${urls.length}] Processing link:`);
 
     // Get the actual added date from git history
     const actualDate = await getActualAddedDate(url);
+    fetched++;
 
     // Update the addedAt field
     data[url].addedAt = actualDate;
@@ -114,7 +125,10 @@ async function main() {
     console.log('');
   }
 
-  console.log(`\n✅ Complete! Updated ${processed} links with accurate dates`);
+  console.log(`\n✅ Complete!`);
+  console.log(`   Processed: ${processed} links`);
+  console.log(`   Skipped: ${skipped} (already had dates)`);
+  console.log(`   Fetched from git: ${fetched}`);
   console.log('📅 Links are now sorted by their actual repository addition date');
 }
 

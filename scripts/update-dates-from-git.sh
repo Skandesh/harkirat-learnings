@@ -21,9 +21,23 @@ echo "✅ Got commit history"
 echo ""
 
 # Process each URL
+skipped=0
+fetched=0
+
 echo "$urls" | while read -r url; do
   count=$((count + 1))
+
+  # Skip if this URL already has an accurate addedAt date (optimization!)
+  existing_date=$(jq -r --arg url "$url" '.[$url].addedAt // empty' links-data.json)
+
+  if [ ! -z "$existing_date" ] && [[ ! "$existing_date" =~ "2025-11-16T20:02" ]]; then
+    skipped=$((skipped + 1))
+    echo "[$count/$total] ⏭  Skipping (already has date): ${url:0:50}..."
+    continue
+  fi
+
   echo "[$count/$total] Processing: ${url:0:60}..."
+  fetched=$((fetched + 1))
 
   # Search through commits from oldest to newest
   date_found=""
@@ -63,4 +77,8 @@ echo "$urls" | while read -r url; do
   echo ""
 done
 
-echo "✅ Complete! All links updated with accurate git dates"
+echo ""
+echo "✅ Complete!"
+echo "   Skipped: $skipped (already had dates)"
+echo "   Fetched from git: $fetched"
+echo "📅 Links are now sorted by their actual repository addition date"
