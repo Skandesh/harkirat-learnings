@@ -1,18 +1,82 @@
 {
-  "https://www.youtube.com/watch?v=dQw4w9WgXcQ": {
-    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "title": "Example YouTube Video",
-    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    "author": "Example Channel",
+  "https://www.youtube.com/watch?v=8pTEmbeENF4": {
+    "url": "https://www.youtube.com/watch?v=8pTEmbeENF4",
+    "title": "100xDevs Cohort 2.0 - Full Stack Development",
+    "thumbnail": "https://i.ytimg.com/vi/8pTEmbeENF4/maxresdefault.jpg",
+    "author": "Harkirat Singh",
     "type": "youtube",
-    "fetchedAt": "2025-01-16T00:00:00.000Z"
+    "fetchedAt": "2025-01-16T10:30:00.000Z"
   },
-  "https://example.com": {
-    "url": "https://example.com",
-    "title": "Example Website",
-    "image": null,
-    "description": "This is an example website entry",
+  "https://www.youtube.com/watch?v=nu_pCVPKzTk": {
+    "url": "https://www.youtube.com/watch?v=nu_pCVPKzTk",
+    "title": "System Design for Beginners",
+    "thumbnail": "https://i.ytimg.com/vi/nu_pCVPKzTk/maxresdefault.jpg",
+    "author": "Harkirat Singh",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T10:31:00.000Z"
+  },
+  "https://react.dev/": {
+    "url": "https://react.dev/",
+    "title": "React - The library for web and native user interfaces",
+    "image": "https://react.dev/images/og-home.png",
+    "description": "React is the library for web and native user interfaces. Build user interfaces out of individual pieces called components written in JavaScript.",
     "type": "website",
-    "fetchedAt": "2025-01-16T00:00:00.000Z"
+    "fetchedAt": "2025-01-16T10:32:00.000Z"
+  },
+  "https://nextjs.org/": {
+    "url": "https://nextjs.org/",
+    "title": "Next.js by Vercel - The React Framework",
+    "image": "https://nextjs.org/og-image.png",
+    "description": "Next.js by Vercel is the full-stack React framework for the web.",
+    "type": "website",
+    "fetchedAt": "2025-01-16T10:33:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=RLtyhwFtXQA": {
+    "url": "https://www.youtube.com/watch?v=RLtyhwFtXQA",
+    "title": "Docker Tutorial for Beginners",
+    "thumbnail": "https://i.ytimg.com/vi/RLtyhwFtXQA/maxresdefault.jpg",
+    "author": "Harkirat Singh",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T10:34:00.000Z"
+  },
+  "https://nodejs.org/": {
+    "url": "https://nodejs.org/",
+    "title": "Node.js — Run JavaScript Everywhere",
+    "image": "https://nodejs.org/static/images/logo-hexagon-card.png",
+    "description": "Node.js® is a free, open-source, cross-platform JavaScript runtime environment.",
+    "type": "website",
+    "fetchedAt": "2025-01-16T10:35:00.000Z"
+  },
+  "https://www.typescriptlang.org/": {
+    "url": "https://www.typescriptlang.org/",
+    "title": "TypeScript: JavaScript With Syntax For Types",
+    "image": "https://www.typescriptlang.org/images/branding/ts-lettermark-blue.png",
+    "description": "TypeScript is a strongly typed programming language that builds on JavaScript.",
+    "type": "website",
+    "fetchedAt": "2025-01-16T10:36:00.000Z"
+  },
+  "https://www.youtube.com/watch?v=WpkDN78P884": {
+    "url": "https://www.youtube.com/watch?v=WpkDN78P884",
+    "title": "PostgreSQL Tutorial - Database Fundamentals",
+    "thumbnail": "https://i.ytimg.com/vi/WpkDN78P884/maxresdefault.jpg",
+    "author": "Harkirat Singh",
+    "type": "youtube",
+    "fetchedAt": "2025-01-16T10:37:00.000Z"
+  },
+  "https://tailwindcss.com/": {
+    "url": "https://tailwindcss.com/",
+    "title": "Tailwind CSS - Rapidly build modern websites",
+    "image": "https://tailwindcss.com/_next/static/media/social-card-large.a6e71726.jpg",
+    "description": "A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.",
+    "type": "website",
+    "fetchedAt": "2025-01-16T10:38:00.000Z"
+  },
+  "https://www.prisma.io/": {
+    "url": "https://www.prisma.io/",
+    "title": "Prisma | Next-generation ORM for Node.js & TypeScript",
+    "image": "https://prismalens.vercel.app/header/logo-dark.svg",
+    "description": "Prisma is a next-generation ORM that consists of these tools: Prisma Client, Prisma Migrate, and Prisma Studio.",
+    "type": "website",
+    "fetchedAt": "2025-01-16T10:39:00.000Z"
   }
 }
