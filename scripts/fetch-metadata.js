@@ -140,12 +140,11 @@ function parseLinks(content) {
 // Main function
 async function main() {
   // Step 1: Fetch README from hkirat's repo
-  const repoUrl = 'https://api.github.com/repos/hkirat/what-im-learning/contents/README.md';
+  const repoUrl = 'https://raw.githubusercontent.com/hkirat/what-im-learning/main/README.md';
 
   try {
     const response = await fetch(repoUrl);
-    const data = await response.json();
-    const readmeContent = Buffer.from(data.content, 'base64').toString('utf-8');
+    const readmeContent = await response.text();
 
     // Step 2: Parse links from README
     const extractedLinks = parseLinks(readmeContent);
