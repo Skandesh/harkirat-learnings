@@ -220,7 +220,7 @@
     "title": "Common Rust Lifetime Misconceptions",
     "image": "https://opengraph.githubassets.com/default",
     "description": "Understanding Rust lifetime misconceptions - if T: 'static then T must be valid for the entire program",
-    "type": "website",
+    "type": "github",
     "addedAt": "2024-07-22T20:10:44Z"
   },
   "https://github.com/saikatharryc/helm/tree/master/charts/judge0": {
@@ -228,7 +228,7 @@
     "title": "Judge0 Helm Chart",
     "image": "https://opengraph.githubassets.com/default",
     "description": "Helm chart for deploying Judge0 code execution system",
-    "type": "website",
+    "type": "github",
     "addedAt": "2024-11-12T00:01:19Z"
   },
   "https://github.com/parseablehq/parseable/tree/main": {
@@ -236,7 +236,7 @@
     "title": "Parseable - Log Analytics Platform",
     "image": "https://opengraph.githubassets.com/default",
     "description": "Cloud native log analytics platform built in Rust",
-    "type": "website",
+    "type": "github",
     "addedAt": "2024-11-02T06:50:28Z"
   },
   "https://github.com/Glimesh/broadcast-box/blob/main/internal/webrtc/webrtc.go": {
@@ -244,7 +244,7 @@
     "title": "Glimesh WebRTC Implementation",
     "image": "https://opengraph.githubassets.com/default",
     "description": "WebRTC implementation in Go for streaming platform",
-    "type": "website",
+    "type": "github",
     "addedAt": "2024-11-03T20:50:59Z"
   },
   "https://eips.ethereum.org/EIPS/eip-1967": {
@@ -260,7 +260,7 @@
     "title": "Rust Compiler - Borrow Checker Source Code",
     "image": "https://opengraph.githubassets.com/default",
     "description": "Rust compiler borrow checker implementation source code",
-    "type": "website",
+    "type": "github",
     "addedAt": "2025-02-21T21:34:34Z"
   },
   "https://craftinginterpreters.com/": {

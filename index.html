@@ -451,9 +451,9 @@
 
         // Categorize link based on URL
         function categorizeLink(link) {
-            if (link.type) return link.type; // Use existing type if available
-
             const url = link.url.toLowerCase();
+
+            // Always check URL first for accurate categorization
             if (url.includes('youtube.com') || url.includes('youtu.be')) {
                 return 'youtube';
             } else if (url.includes('github.com')) {
