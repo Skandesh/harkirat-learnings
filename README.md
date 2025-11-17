@@ -6,10 +6,12 @@ A beautiful, auto-updating link gallery that showcases curated learning resource
 
 - **Smart Caching** - Fetches metadata once and stores it. Never re-fetches existing links.
 - **YouTube Integration** - Shows video thumbnails and titles for YouTube links.
+- **GitHub Categorization** - Automatically detects and categorizes GitHub repositories.
 - **Open Graph Support** - Displays images, titles, and descriptions for websites.
+- **Fuzzy Search** - Search across titles, descriptions, and authors using Fuse.js.
 - **Auto-Updates** - GitHub Actions runs every 15 hours to fetch new links and update dates.
-- **Beautiful UI** - Modern, responsive card-based design with dark theme.
-- **Filter by Type** - Easily filter between YouTube videos and websites.
+- **Beautiful UI** - Modern, responsive card-based design with Vercel-inspired dark theme.
+- **Filter by Type** - Easily filter between YouTube videos, GitHub repos, and websites.
 - **Zero Maintenance** - Fully automated via GitHub Actions.
 
 ## How It Works
@@ -72,13 +74,20 @@ This means:
 
 ### Option 1: GitHub Pages (Recommended)
 
-1. Fork this repository
-2. Go to Settings → Pages
-3. Set Source to "Deploy from a branch"
-4. Select branch: `main` (or your branch)
-5. Save and wait for deployment
+**Quick Deploy:**
+
+1. Merge your feature branch to `main` (or use your current branch)
+2. Go to **Settings** → **Pages**
+3. Under **Source**, select:
+   - Source: **Deploy from a branch**
+   - Branch: **main** (or your branch)
+   - Folder: **/ (root)**
+4. Click **Save**
+5. Wait 1-2 minutes for GitHub to build and deploy
 
 Your site will be live at: `https://<username>.github.io/<repo-name>/`
+
+**Note**: The `.nojekyll` file is included to ensure GitHub Pages serves all files correctly.
 
 ### Option 2: Netlify
 
@@ -166,7 +175,7 @@ const repoUrl = 'https://api.github.com/repos/hkirat/what-im-learning/contents/R
 
 ## Tech Stack
 
-- **Frontend**: Vanilla HTML/CSS/JavaScript (no frameworks!)
+- **Frontend**: Vanilla HTML/CSS/JavaScript with Fuse.js for fuzzy search
 - **Backend**: Node.js (built-in modules only)
 - **Automation**: GitHub Actions
 - **Hosting**: GitHub Pages / Netlify / Vercel
