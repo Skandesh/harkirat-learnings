@@ -113,10 +113,44 @@ async function fetchWebsiteMetadata(url) {
   }
 }
 
+// Fetch GitHub repository metadata
+async function fetchGitHubMetadata(url) {
+  try {
+    // Extract owner and repo from GitHub URL
+    const match = url.match(/github\.com\/([^\/]+)\/([^\/\?#]+)/);
+    if (!match) return null;
+
+    const [, owner, repo] = match;
+
+    // Try to get repo info from GitHub API (if available)
+    // For now, use basic metadata
+    return {
+      url,
+      title: `${owner}/${repo}`,
+      description: 'GitHub Repository',
+      image: null,
+      type: 'github',
+      addedAt: new Date().toISOString()
+    };
+  } catch (error) {
+    // Fallback
+    return {
+      url,
+      title: 'GitHub Repository',
+      description: '',
+      image: null,
+      type: 'github',
+      addedAt: new Date().toISOString()
+    };
+  }
+}
+
 // Fetch metadata based on URL type
 async function fetchMetadata(url) {
   if (url.includes('youtube.com') || url.includes('youtu.be')) {
     return await fetchYouTubeMetadata(url);
+  } else if (url.includes('github.com')) {
+    return await fetchGitHubMetadata(url);
   } else {
     return await fetchWebsiteMetadata(url);
   }

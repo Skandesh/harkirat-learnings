@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What Kirat is Learning - Curated Resources</title>
     <meta name="description" content="A curated collection of learning resources from @kirat_tw's GitHub repository">
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <style>
         * {
             margin: 0;
@@ -102,6 +103,42 @@
             color: #e2e8f0;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 20px 14px 48px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .search-input:focus {
+            border-color: var(--text-primary);
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            pointer-events: none;
         }
 
         .filters {
@@ -279,6 +316,12 @@
             border-color: rgba(255, 0, 0, 0.2);
         }
 
+        .card-type.github {
+            background: rgba(88, 166, 255, 0.05);
+            color: #58a6ff;
+            border-color: rgba(88, 166, 255, 0.2);
+        }
+
         .card-author {
             font-size: 0.85rem;
             color: var(--text-secondary);
@@ -364,15 +407,25 @@
                     <div class="stat-label">YouTube</div>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-number" id="github-count">0</div>
+                    <div class="stat-label">GitHub</div>
+                </div>
+                <div class="stat-item">
                     <div class="stat-number" id="website-count">0</div>
                     <div class="stat-label">Websites</div>
                 </div>
             </div>
         </header>
 
+        <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="search-input" class="search-input" placeholder="Search resources by title, description, or author...">
+        </div>
+
         <div class="filters">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="youtube">YouTube</button>
+            <button class="filter-btn" data-filter="github">GitHub</button>
             <button class="filter-btn" data-filter="website">Websites</button>
         </div>
 
@@ -391,8 +444,24 @@
     <script>
         const container = document.getElementById('links-container');
         const loading = document.getElementById('loading');
+        const searchInput = document.getElementById('search-input');
         let allLinks = [];
         let currentFilter = 'all';
+        let fuse = null;
+
+        // Categorize link based on URL
+        function categorizeLink(link) {
+            if (link.type) return link.type; // Use existing type if available
+
+            const url = link.url.toLowerCase();
+            if (url.includes('youtube.com') || url.includes('youtu.be')) {
+                return 'youtube';
+            } else if (url.includes('github.com')) {
+                return 'github';
+            } else {
+                return 'website';
+            }
+        }
 
         // Load and display links
         async function loadLinks() {
@@ -406,15 +475,30 @@
                 const data = await response.json();
                 allLinks = Object.values(data);
 
+                // Categorize all links
+                allLinks = allLinks.map(link => ({
+                    ...link,
+                    type: categorizeLink(link)
+                }));
+
                 // Sort by date (newest first)
                 allLinks.sort((a, b) => new Date(b.addedAt || b.fetchedAt) - new Date(a.addedAt || a.fetchedAt));
 
+                // Initialize Fuse.js for fuzzy search
+                fuse = new Fuse(allLinks, {
+                    keys: ['title', 'description', 'author'],
+                    threshold: 0.3,
+                    includeScore: true
+                });
+
                 // Update stats
                 const youtubeCount = allLinks.filter(link => link.type === 'youtube').length;
+                const githubCount = allLinks.filter(link => link.type === 'github').length;
                 const websiteCount = allLinks.filter(link => link.type === 'website').length;
 
                 document.getElementById('total-count').textContent = allLinks.length;
                 document.getElementById('youtube-count').textContent = youtubeCount;
+                document.getElementById('github-count').textContent = githubCount;
                 document.getElementById('website-count').textContent = websiteCount;
 
                 // Display links
@@ -485,9 +569,9 @@
             }
 
             // Fallback placeholder
-            if (!thumbnailHTML || (link.type === 'website' && link.image)) {
-                const icon = link.type === 'youtube' ? '▶️' : '🔗';
-                thumbnailHTML += `<div class="card-thumbnail placeholder" style="${link.image ? 'display:none' : ''}">${icon}</div>`;
+            if (!thumbnailHTML || (link.type === 'website' && link.image) || link.type === 'github') {
+                const icon = link.type === 'youtube' ? '▶️' : (link.type === 'github' ? '🐙' : '🔗');
+                thumbnailHTML += `<div class="card-thumbnail placeholder" style="${link.image && link.type !== 'github' ? 'display:none' : ''}">${icon}</div>`;
             }
 
             // Truncate description
@@ -508,7 +592,7 @@
                     ${dateAdded ? `<p class="card-date">Added ${dateAdded}</p>` : ''}
                     <div class="card-meta">
                         <span class="card-type ${link.type}">
-                            ${link.type === 'youtube' ? '▶️ YouTube' : '🌐 Website'}
+                            ${link.type === 'youtube' ? '▶️ YouTube' : (link.type === 'github' ? '🐙 GitHub' : '🌐 Website')}
                         </span>
                         ${link.author ? `<span class="card-author">${link.author}</span>` : ''}
                     </div>
@@ -518,6 +602,30 @@
             return card;
         }
 
+        // Get filtered links based on current filter and search
+        function getFilteredLinks() {
+            let links = allLinks;
+
+            // Apply search if there's a query
+            const searchQuery = searchInput.value.trim();
+            if (searchQuery && fuse) {
+                const results = fuse.search(searchQuery);
+                links = results.map(result => result.item);
+            }
+
+            // Apply category filter
+            if (currentFilter !== 'all') {
+                links = links.filter(link => link.type === currentFilter);
+            }
+
+            return links;
+        }
+
+        // Search functionality
+        searchInput.addEventListener('input', () => {
+            displayLinks(getFilteredLinks());
+        });
+
         // Filter functionality
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
@@ -525,13 +633,9 @@
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
-                // Filter links
+                // Update filter
                 currentFilter = btn.dataset.filter;
-                const filteredLinks = currentFilter === 'all'
-                    ? allLinks
-                    : allLinks.filter(link => link.type === currentFilter);
-
-                displayLinks(filteredLinks);
+                displayLinks(getFilteredLinks());
             });
         });
 
