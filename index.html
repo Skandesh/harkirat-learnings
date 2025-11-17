@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Kirat is Learning - Curated Resources</title>
+    <meta name="description" content="A curated collection of learning resources from @kirat_tw's GitHub repository">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0070f3;
+            --primary-dark: #0761d1;
+            --bg-main: #000000;
+            --bg-card: #111111;
+            --bg-card-hover: #1a1a1a;
+            --text-primary: #ededed;
+            --text-secondary: #888888;
+            --border: #333333;
+            --shadow: rgba(0, 0, 0, 0.5);
+            --gradient-1: #7928ca;
+            --gradient-2: #ff0080;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--gradient-1) 0%, var(--gradient-2) 100%);
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(121, 40, 202, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(to right, #fff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #e2e8f0;
+            margin-bottom: 20px;
+        }
+
+        .subtitle a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px 28px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            background: var(--bg-card);
+            border-color: var(--text-secondary);
+            color: var(--text-primary);
+        }
+
+        .filter-btn.active {
+            background: var(--text-primary);
+            border-color: var(--text-primary);
+            color: var(--bg-main);
+        }
+
+        #loading {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        .spinner {
+            border: 3px solid var(--border);
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #links-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .link-card {
+            background: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03);
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            border-color: var(--text-secondary);
+            background: var(--bg-card-hover);
+        }
+
+        .card-thumbnail {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+        }
+
+        .card-thumbnail.placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: block;
+            line-height: 1.4;
+        }
+
+        .card-title:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        .card-date {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .card-date::before {
+            content: "📅";
+            font-size: 0.85rem;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        .card-type {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-type.youtube {
+            background: rgba(255, 0, 0, 0.05);
+            color: #ff4444;
+            border-color: rgba(255, 0, 0, 0.2);
+        }
+
+        .card-author {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .empty-state-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-state-text {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+            margin-top: 80px;
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            #links-container {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                gap: 15px;
+            }
+
+            .stat-item {
+                padding: 10px 20px;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>What Kirat is Learning</h1>
+            <p class="subtitle">
+                A curated collection of learning resources from
+                <a href="https://github.com/hkirat/what-im-learning" target="_blank" rel="noopener">@kirat_tw's GitHub</a>
+            </p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="total-count">0</div>
+                    <div class="stat-label">Total Links</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="youtube-count">0</div>
+                    <div class="stat-label">YouTube</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="website-count">0</div>
+                    <div class="stat-label">Websites</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="youtube">YouTube</button>
+            <button class="filter-btn" data-filter="website">Websites</button>
+        </div>
+
+        <div id="loading">
+            <div class="spinner"></div>
+            Loading resources...
+        </div>
+
+        <div id="links-container"></div>
+
+        <footer>
+            <p>Auto-updates every 900 minutes via GitHub Actions</p>
+        </footer>
+    </div>
+
+    <script>
+        const container = document.getElementById('links-container');
+        const loading = document.getElementById('loading');
+        let allLinks = [];
+        let currentFilter = 'all';
+
+        // Load and display links
+        async function loadLinks() {
+            loading.style.display = 'block';
+            container.innerHTML = '';
+
+            try {
+                const response = await fetch('links-data.json');
+                if (!response.ok) throw new Error('Failed to load data');
+
+                const data = await response.json();
+                allLinks = Object.values(data);
+
+                // Sort by date (newest first)
+                allLinks.sort((a, b) => new Date(b.addedAt || b.fetchedAt) - new Date(a.addedAt || a.fetchedAt));
+
+                // Update stats
+                const youtubeCount = allLinks.filter(link => link.type === 'youtube').length;
+                const websiteCount = allLinks.filter(link => link.type === 'website').length;
+
+                document.getElementById('total-count').textContent = allLinks.length;
+                document.getElementById('youtube-count').textContent = youtubeCount;
+                document.getElementById('website-count').textContent = websiteCount;
+
+                // Display links
+                displayLinks(allLinks);
+
+            } catch (error) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">⚠️</div>
+                        <div class="empty-state-text">
+                            Failed to load resources. Please try again later.
+                        </div>
+                    </div>
+                `;
+            }
+
+            loading.style.display = 'none';
+        }
+
+        // Display links based on filter
+        function displayLinks(links) {
+            container.innerHTML = '';
+
+            if (links.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📚</div>
+                        <div class="empty-state-text">
+                            No resources found. Check back soon!
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            links.forEach(link => {
+                const card = createLinkCard(link);
+                container.appendChild(card);
+            });
+        }
+
+        // Format date helper
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffTime = Math.abs(now - date);
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+            if (diffDays === 0) return 'Today';
+            if (diffDays === 1) return 'Yesterday';
+            if (diffDays < 7) return `${diffDays} days ago`;
+            if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+            if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
+            return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+        }
+
+        // Create a link card element
+        function createLinkCard(link) {
+            const card = document.createElement('div');
+            card.className = 'link-card';
+
+            // Create thumbnail
+            let thumbnailHTML = '';
+            if (link.type === 'youtube' && link.thumbnail) {
+                thumbnailHTML = `<img src="${link.thumbnail}" alt="${link.title}" class="card-thumbnail" loading="lazy" onerror="this.style.display='none'">`;
+            } else if (link.type === 'website' && link.image) {
+                thumbnailHTML = `<img src="${link.image}" alt="${link.title}" class="card-thumbnail" loading="lazy" onerror="this.parentElement.querySelector('.placeholder').style.display='flex'">`;
+            }
+
+            // Fallback placeholder
+            if (!thumbnailHTML || (link.type === 'website' && link.image)) {
+                const icon = link.type === 'youtube' ? '▶️' : '🔗';
+                thumbnailHTML += `<div class="card-thumbnail placeholder" style="${link.image ? 'display:none' : ''}">${icon}</div>`;
+            }
+
+            // Truncate description
+            const description = link.description
+                ? (link.description.length > 120 ? link.description.substring(0, 120) + '...' : link.description)
+                : '';
+
+            // Format date
+            const dateAdded = link.addedAt ? formatDate(link.addedAt) : (link.fetchedAt ? formatDate(link.fetchedAt) : '');
+
+            card.innerHTML = `
+                ${thumbnailHTML}
+                <div class="card-content">
+                    <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="card-title">
+                        ${link.title}
+                    </a>
+                    ${description ? `<p class="card-description">${description}</p>` : ''}
+                    ${dateAdded ? `<p class="card-date">Added ${dateAdded}</p>` : ''}
+                    <div class="card-meta">
+                        <span class="card-type ${link.type}">
+                            ${link.type === 'youtube' ? '▶️ YouTube' : '🌐 Website'}
+                        </span>
+                        ${link.author ? `<span class="card-author">${link.author}</span>` : ''}
+                    </div>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Filter links
+                currentFilter = btn.dataset.filter;
+                const filteredLinks = currentFilter === 'all'
+                    ? allLinks
+                    : allLinks.filter(link => link.type === currentFilter);
+
+                displayLinks(filteredLinks);
+            });
+        });
+
+        // Initial load
+        loadLinks();
+
+        // Auto-refresh every 5 minutes to get updated data
+        setInterval(loadLinks, 5 * 60 * 1000);
+    </script>
+</body>
+</html>
